@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dashboard de monitoramento em tempo real - Sensores, Finanças, Tráfego e Clima">
+    <title>{% block title %}Dashboard em Tempo Real{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'dashboard/dashboard.css' %}">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <header class="dashboard-header">
+        <nav>
+            <a href="{% url 'dashboard:home' %}" class="logo">📊 Dashboard RT</a>
+            <div class="nav-links">
+                <a href="{% url 'admin:index' %}">Admin</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Dashboard em Tempo Real | Django Channels + Celery + Plotly Dash</p>
+    </footer>
+    
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>

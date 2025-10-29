@@ -1,0 +1,1 @@
+"""Dash apps registered with django-plotly-dash."""

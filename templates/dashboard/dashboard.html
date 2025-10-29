@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load plotly_dash %}
+
+{% block title %}Dashboard em Tempo Real{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <div class="dashboard-header">
+        <h2>Monitoramento em Tempo Real</h2>
+        <p>Sensores • Finanças • Tráfego • Clima</p>
+    </div>
+    
+    {% plotly_app name='RealTimeDashboard' ratio=0.55 %}
+</div>
+{% endblock %}
